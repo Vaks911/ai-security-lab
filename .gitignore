@@ -18,6 +18,8 @@ __pycache__/
 *.onnx
 data/MVTecAD/
 data/poisoned*/
+# Служебные папки Anomalib/Lightning
+results/Patchcore/
 results/*/v*/
 
 # IDE
