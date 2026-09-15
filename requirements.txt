@@ -1,0 +1,15 @@
+anomalib==1.1.0
+torch>=2.0,<2.7
+torchvision
+timm
+numpy<2
+opencv-python<4.11
+pillow
+pandas
+scikit-learn
+matplotlib
+jsonargparse==4.28.0
+lightning>=2.0,<2.6
+imgaug
+kornia
+open_clip_torch

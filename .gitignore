@@ -1,0 +1,29 @@
+# Окружения
+venv*/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Модели и данные (слишком большие для git)
+*.ckpt
+*.pth
+*.onnx
+data/MVTecAD/
+data/poisoned*/
+results/*/v*/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
