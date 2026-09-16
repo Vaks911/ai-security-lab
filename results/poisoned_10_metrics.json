@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-09-16T10:26:35",
+  "eval_name": "poisoned_10",
+  "ckpt_path": "C:\\MyPythonProjects\\ai-security-lab\\results\\poisoned_10\\Patchcore\\MVTec\\bottle\\v0\\weights\\lightning\\model.ckpt",
+  "n_images": 83,
+  "confusion": {
+    "tp": 63,
+    "tn": 0,
+    "fp": 20,
+    "fn": 0
+  },
+  "overall": {
+    "precision": 0.759,
+    "recall": 1.0,
+    "f1": 0.863,
+    "accuracy": 0.759
+  },
+  "per_class": {
+    "broken_large": {
+      "total": 20,
+      "detected_as_defect": 20,
+      "recall": 1.0,
+      "mean_score": 0.7254,
+      "min_score": 0.5,
+      "max_score": 1.0
+    },
+    "contamination": {
+      "total": 21,
+      "detected_as_defect": 21,
+      "recall": 1.0,
+      "mean_score": 0.8179,
+      "min_score": 0.5077,
+      "max_score": 1.0
+    },
+    "broken_small": {
+      "total": 22,
+      "detected_as_defect": 22,
+      "recall": 1.0,
+      "mean_score": 0.8069,
+      "min_score": 0.5051,
+      "max_score": 0.9587
+    },
+    "good": {
+      "total": 20,
+      "detected_as_defect": 20,
+      "recall": 1.0,
+      "mean_score": 0.5859,
+      "min_score": 0.5255,
+      "max_score": 0.6492
+    }
+  }
+}

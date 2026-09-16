@@ -49,8 +49,12 @@ DATA_ROOT = Path(
 RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 RESULTS_DIR.mkdir(exist_ok=True)
 
-METRICS_JSON = RESULTS_DIR / "baseline_metrics.json"
-PER_IMAGE_CSV = RESULTS_DIR / "baseline_per_image.csv"
+# Имя запуска: по умолчанию "baseline". Можно переопределить через env-переменную
+# EVAL_NAME, чтобы не перезаписывать baseline при тестировании отравленных моделей.
+EVAL_NAME = os.getenv("EVAL_NAME", "baseline")
+
+METRICS_JSON = RESULTS_DIR / f"{EVAL_NAME}_metrics.json"
+PER_IMAGE_CSV = RESULTS_DIR / f"{EVAL_NAME}_per_image.csv"
 
 
 # === Функции ===
@@ -81,6 +85,7 @@ def check_paths() -> None:
     print(f"   defect-detection: {DEFECT_DETECTION_ROOT}")
     print(f"   чекпоинт:         {CKPT_PATH}")
     print(f"   датасет:          {DATA_ROOT}")
+    print(f"   eval name:        {EVAL_NAME}")
 
 
 def load_detector():
@@ -222,6 +227,8 @@ def compute_metrics(rows: list) -> dict:
 
     return {
         "timestamp": datetime.now().isoformat(timespec="seconds"),
+        "eval_name": EVAL_NAME,
+        "ckpt_path": str(CKPT_PATH),
         "n_images": len(rows),
         "confusion": {"tp": tp, "tn": tn, "fp": fp, "fn": fn},
         "overall": {
@@ -264,7 +271,7 @@ def save_results(rows: list, metrics: dict) -> None:
 def print_summary(metrics: dict) -> None:
     """Печатает итоговую таблицу в консоль."""
     print("\n" + "=" * 60)
-    print("BASELINE")
+    print(f"BASELINE  [{metrics.get('eval_name', 'baseline')}]")
     print("=" * 60)
     print(f"Изображений:  {metrics['n_images']}")
     print(
@@ -292,7 +299,7 @@ def print_summary(metrics: dict) -> None:
 
 
 def main() -> None:
-    print("=== Baseline для PatchCore ===")
+    print(f"=== Baseline для PatchCore [{EVAL_NAME}] ===")
     check_paths()
 
     detector = load_detector()
