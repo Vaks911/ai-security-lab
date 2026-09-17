@@ -1,0 +1,281 @@
+{
+  "epsilon_set": [
+    0.05,
+    0.08,
+    0.1
+  ],
+  "pgd_steps": 100,
+  "results": [
+    {
+      "class": "contamination",
+      "file": "019.png",
+      "eps": 0.05,
+      "orig_score": 0.5399,
+      "adv_score": 0.4064,
+      "adv_label": "NORMAL",
+      "delta_pct": -24.73,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "019.png",
+      "eps": 0.08,
+      "orig_score": 0.5399,
+      "adv_score": 0.4025,
+      "adv_label": "NORMAL",
+      "delta_pct": -25.45,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "019.png",
+      "eps": 0.1,
+      "orig_score": 0.5399,
+      "adv_score": 0.4047,
+      "adv_label": "NORMAL",
+      "delta_pct": -25.04,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "016.png",
+      "eps": 0.05,
+      "orig_score": 0.5435,
+      "adv_score": 0.4563,
+      "adv_label": "NORMAL",
+      "delta_pct": -16.04,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "016.png",
+      "eps": 0.08,
+      "orig_score": 0.5435,
+      "adv_score": 0.4598,
+      "adv_label": "NORMAL",
+      "delta_pct": -15.4,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "016.png",
+      "eps": 0.1,
+      "orig_score": 0.5435,
+      "adv_score": 0.4487,
+      "adv_label": "NORMAL",
+      "delta_pct": -17.44,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "020.png",
+      "eps": 0.05,
+      "orig_score": 0.5549,
+      "adv_score": 0.4553,
+      "adv_label": "NORMAL",
+      "delta_pct": -17.94,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "020.png",
+      "eps": 0.08,
+      "orig_score": 0.5549,
+      "adv_score": 0.4429,
+      "adv_label": "NORMAL",
+      "delta_pct": -20.18,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "020.png",
+      "eps": 0.1,
+      "orig_score": 0.5549,
+      "adv_score": 0.4393,
+      "adv_label": "NORMAL",
+      "delta_pct": -20.82,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "012.png",
+      "eps": 0.05,
+      "orig_score": 0.5572,
+      "adv_score": 0.4635,
+      "adv_label": "NORMAL",
+      "delta_pct": -16.82,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "012.png",
+      "eps": 0.08,
+      "orig_score": 0.5572,
+      "adv_score": 0.4543,
+      "adv_label": "NORMAL",
+      "delta_pct": -18.47,
+      "flipped": true
+    },
+    {
+      "class": "contamination",
+      "file": "012.png",
+      "eps": 0.1,
+      "orig_score": 0.5572,
+      "adv_score": 0.4508,
+      "adv_label": "NORMAL",
+      "delta_pct": -19.1,
+      "flipped": true
+    },
+    {
+      "class": "broken_small",
+      "file": "000.png",
+      "eps": 0.05,
+      "orig_score": 0.6009,
+      "adv_score": 0.5334,
+      "adv_label": "DEFECT",
+      "delta_pct": -11.23,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "000.png",
+      "eps": 0.08,
+      "orig_score": 0.6009,
+      "adv_score": 0.525,
+      "adv_label": "DEFECT",
+      "delta_pct": -12.63,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "000.png",
+      "eps": 0.1,
+      "orig_score": 0.6009,
+      "adv_score": 0.5269,
+      "adv_label": "DEFECT",
+      "delta_pct": -12.32,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "014.png",
+      "eps": 0.05,
+      "orig_score": 0.6417,
+      "adv_score": 0.5873,
+      "adv_label": "DEFECT",
+      "delta_pct": -8.47,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "014.png",
+      "eps": 0.08,
+      "orig_score": 0.6417,
+      "adv_score": 0.5822,
+      "adv_label": "DEFECT",
+      "delta_pct": -9.27,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "014.png",
+      "eps": 0.1,
+      "orig_score": 0.6417,
+      "adv_score": 0.5841,
+      "adv_label": "DEFECT",
+      "delta_pct": -8.96,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "005.png",
+      "eps": 0.05,
+      "orig_score": 0.6708,
+      "adv_score": 0.5867,
+      "adv_label": "DEFECT",
+      "delta_pct": -12.54,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "005.png",
+      "eps": 0.08,
+      "orig_score": 0.6708,
+      "adv_score": 0.5759,
+      "adv_label": "DEFECT",
+      "delta_pct": -14.14,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "005.png",
+      "eps": 0.1,
+      "orig_score": 0.6708,
+      "adv_score": 0.5773,
+      "adv_label": "DEFECT",
+      "delta_pct": -13.94,
+      "flipped": false
+    },
+    {
+      "class": "broken_large",
+      "file": "011.png",
+      "eps": 0.05,
+      "orig_score": 0.6895,
+      "adv_score": 0.5747,
+      "adv_label": "DEFECT",
+      "delta_pct": -16.65,
+      "flipped": false
+    },
+    {
+      "class": "broken_large",
+      "file": "011.png",
+      "eps": 0.08,
+      "orig_score": 0.6895,
+      "adv_score": 0.5682,
+      "adv_label": "DEFECT",
+      "delta_pct": -17.59,
+      "flipped": false
+    },
+    {
+      "class": "broken_large",
+      "file": "011.png",
+      "eps": 0.1,
+      "orig_score": 0.6895,
+      "adv_score": 0.5669,
+      "adv_label": "DEFECT",
+      "delta_pct": -17.78,
+      "flipped": false
+    },
+    {
+      "class": "broken_large",
+      "file": "005.png",
+      "eps": 0.05,
+      "orig_score": 0.7374,
+      "adv_score": 0.652,
+      "adv_label": "DEFECT",
+      "delta_pct": -11.58,
+      "flipped": false
+    },
+    {
+      "class": "broken_large",
+      "file": "005.png",
+      "eps": 0.08,
+      "orig_score": 0.7374,
+      "adv_score": 0.6455,
+      "adv_label": "DEFECT",
+      "delta_pct": -12.46,
+      "flipped": false
+    },
+    {
+      "class": "broken_large",
+      "file": "005.png",
+      "eps": 0.1,
+      "orig_score": 0.7374,
+      "adv_score": 0.6399,
+      "adv_label": "DEFECT",
+      "delta_pct": -13.21,
+      "flipped": false
+    }
+  ],
+  "total_flips": 12
+}

@@ -1,5 +1,7 @@
 {
-  "timestamp": "2026-09-15T22:59:31",
+  "timestamp": "2026-09-16T12:01:31",
+  "eval_name": "baseline",
+  "ckpt_path": "C:\\MyPythonProjects\\defect-detection\\results\\Patchcore\\MVTec\\bottle\\v3\\weights\\lightning\\model.ckpt",
   "n_images": 83,
   "confusion": {
     "tp": 62,
@@ -14,14 +16,6 @@
     "accuracy": 0.988
   },
   "per_class": {
-    "good": {
-      "total": 20,
-      "detected_as_defect": 0,
-      "recall": 0.0,
-      "mean_score": 0.3046,
-      "min_score": 0.2544,
-      "max_score": 0.3647
-    },
     "broken_large": {
       "total": 20,
       "detected_as_defect": 20,
@@ -30,14 +24,6 @@
       "min_score": 0.6895,
       "max_score": 0.8777
     },
-    "contamination": {
-      "total": 21,
-      "detected_as_defect": 20,
-      "recall": 0.9524,
-      "mean_score": 0.7219,
-      "min_score": 0.5,
-      "max_score": 1.0
-    },
     "broken_small": {
       "total": 22,
       "detected_as_defect": 22,
@@ -45,6 +31,22 @@
       "mean_score": 0.7727,
       "min_score": 0.6009,
       "max_score": 0.8808
+    },
+    "good": {
+      "total": 20,
+      "detected_as_defect": 0,
+      "recall": 0.0,
+      "mean_score": 0.3046,
+      "min_score": 0.2544,
+      "max_score": 0.3647
+    },
+    "contamination": {
+      "total": 21,
+      "detected_as_defect": 20,
+      "recall": 0.9524,
+      "mean_score": 0.7219,
+      "min_score": 0.5,
+      "max_score": 1.0
     }
   }
 }

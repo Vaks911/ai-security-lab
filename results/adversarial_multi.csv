@@ -1,0 +1,10 @@
+class,file,orig_score,orig_label,adv_score,adv_label,delta_pct,feat_loss,flipped
+broken_large,000.png,0.8253,DEFECT,0.6951,DEFECT,-15.78,0.00552,False
+broken_large,006.png,0.8777,DEFECT,0.7461,DEFECT,-14.99,0.00614,False
+broken_large,003.png,0.8603,DEFECT,0.789,DEFECT,-8.29,0.0215,False
+broken_small,018.png,0.8808,DEFECT,0.7869,DEFECT,-10.67,0.00233,False
+broken_small,020.png,0.8702,DEFECT,0.755,DEFECT,-13.24,0.0022,False
+broken_small,004.png,0.8682,DEFECT,0.7981,DEFECT,-8.07,0.00226,False
+contamination,017.png,0.9436,DEFECT,0.9298,DEFECT,-1.46,0.00831,False
+contamination,013.png,0.9228,DEFECT,0.7892,DEFECT,-14.48,0.00556,False
+contamination,018.png,0.8852,DEFECT,0.7697,DEFECT,-13.05,0.00257,False

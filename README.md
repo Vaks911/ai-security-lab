@@ -13,7 +13,7 @@
 
 - [x] Baseline зафиксирован
 - [x] Data Poisoning
-- [ ] Adversarial Attack
+- [x] Adversarial Attack
 - [ ] Митигации
 
 ## Структура
@@ -71,6 +71,37 @@
 
 ---
 
+## Adversarial Attack
+
+Атака в feature-space backbone. Цель — сдвинуть фичи дефекта к среднему нормы,
+чтобы модель назвала его NORMAL.
+
+**Метод:** PGD (100 шагов, eps ∈ {0.05, 0.08, 0.10}) через `FeatureListNet`
+(внутренняя timm-модель PatchCore). Loss = MSE(features, mean_normal_features).
+
+**Результат:** 12/27 flip (**44.4%**). Все 4 `contamination` переключились при eps=0.05.
+
+| Класс | Средний orig score | Flip rate |
+|---|---:|---:|
+| contamination | 0.50–0.56 | **12/12 (100%)** |
+| broken_small | 0.60–0.67 | 0/9 (0%) |
+| broken_large | 0.69–0.74 | 0/6 (0%) |
+
+![Adversarial Attack — три панели](results/adversarial_plot.png)
+
+*Слева: flip rate по классам. В центре: снижение score по eps, насыщение после 0.05.  
+Справа: scatter orig vs adv, зелёная зона — область flip.*
+
+**Ключевой вывод:** атака эффективна **только у границы решения**. Если модель
+уверена в дефекте (score > 0.6) — adversarial-шум не помогает. Если score близок
+к порогу — снижения хватает для flip. Визуально adversarial-картинка неотличима
+от оригинала.
+
+Полные данные: `results/adversarial_border.json`, `results/adversarial_border.csv`.  
+Визуализация: `results/adversarial_border/`.
+
+---
+
 ## 🛠 Технологии
 
 - **Python 3.11**, PyTorch 2.x (CPU)
@@ -83,7 +114,74 @@
 
 ### 1. Окружение
 
-```bash
+```
 python -m venv venv311
 venv311\Scripts\activate
 pip install -r requirements.txt
+```
+
+### 2. Baseline
+
+```
+python baseline\baseline.py
+```
+
+### 3. Data Poisoning
+
+```
+python src\poison.py
+python src\train_poisoned.py
+python src\evaluate_all.py
+python src\plot_poison.py
+```
+
+### 4. Adversarial Attack
+
+```
+python src\recon_patchcore.py
+python src\adversarial_attack.py
+python src\plot_adversarial.py
+```
+
+---
+
+## 📁 Структура проекта
+
+```
+ai-security-lab/
+├── baseline/
+│   └── baseline.py                # Замер метрик с EVAL_NAME
+├── src/
+│   ├── poison.py                  # Создание отравленных датасетов
+│   ├── train_poisoned.py          # Обучение на отравленных данных
+│   ├── evaluate_all.py            # Прогон baseline.py по всем уровням
+│   ├── plot_poison.py             # График Data Poisoning
+│   ├── recon_patchcore.py         # Разведка структуры PatchCore
+│   ├── adversarial_attack.py      # PGD feature-space атака
+│   └── plot_adversarial.py        # График Adversarial Attack
+├── results/
+│   ├── baseline_metrics.json
+│   ├── poison_summary.json
+│   ├── poison_plot.png
+│   ├── adversarial_border.json
+│   ├── adversarial_plot.png
+│   ├── mean_normal_features.pt
+│   └── adversarial_border/        # Визуализация: orig, adv, noise ×10
+├── notes.md                       # Рабочий дневник
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🎯 Дальше
+
+- [ ] **Митигации:** adversarial training на граничных примерах, label-noise detection, ансамбли.
+- [ ] **Adversarial Patch:** наклейка на бутылку, которая «гасит» детекцию.
+- [ ] **Black-box атака:** без доступа к градиентам.
+
+---
+
+## Автор
+
+Максим Нагайцев — [GitHub](https://github.com/Vaks911) · [LinkedIn](https://www.linkedin.com/in/maksim-nagaytsev-ab2311432)

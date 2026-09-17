@@ -1,0 +1,111 @@
+{
+  "epsilon": 0.05,
+  "pgd_steps": 40,
+  "results": [
+    {
+      "class": "broken_large",
+      "file": "000.png",
+      "orig_score": 0.8253,
+      "orig_label": "DEFECT",
+      "adv_score": 0.6951,
+      "adv_label": "DEFECT",
+      "delta_pct": -15.78,
+      "feat_loss": 0.00552,
+      "flipped": false
+    },
+    {
+      "class": "broken_large",
+      "file": "006.png",
+      "orig_score": 0.8777,
+      "orig_label": "DEFECT",
+      "adv_score": 0.7461,
+      "adv_label": "DEFECT",
+      "delta_pct": -14.99,
+      "feat_loss": 0.00614,
+      "flipped": false
+    },
+    {
+      "class": "broken_large",
+      "file": "003.png",
+      "orig_score": 0.8603,
+      "orig_label": "DEFECT",
+      "adv_score": 0.789,
+      "adv_label": "DEFECT",
+      "delta_pct": -8.29,
+      "feat_loss": 0.0215,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "018.png",
+      "orig_score": 0.8808,
+      "orig_label": "DEFECT",
+      "adv_score": 0.7869,
+      "adv_label": "DEFECT",
+      "delta_pct": -10.67,
+      "feat_loss": 0.00233,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "020.png",
+      "orig_score": 0.8702,
+      "orig_label": "DEFECT",
+      "adv_score": 0.755,
+      "adv_label": "DEFECT",
+      "delta_pct": -13.24,
+      "feat_loss": 0.0022,
+      "flipped": false
+    },
+    {
+      "class": "broken_small",
+      "file": "004.png",
+      "orig_score": 0.8682,
+      "orig_label": "DEFECT",
+      "adv_score": 0.7981,
+      "adv_label": "DEFECT",
+      "delta_pct": -8.07,
+      "feat_loss": 0.00226,
+      "flipped": false
+    },
+    {
+      "class": "contamination",
+      "file": "017.png",
+      "orig_score": 0.9436,
+      "orig_label": "DEFECT",
+      "adv_score": 0.9298,
+      "adv_label": "DEFECT",
+      "delta_pct": -1.46,
+      "feat_loss": 0.00831,
+      "flipped": false
+    },
+    {
+      "class": "contamination",
+      "file": "013.png",
+      "orig_score": 0.9228,
+      "orig_label": "DEFECT",
+      "adv_score": 0.7892,
+      "adv_label": "DEFECT",
+      "delta_pct": -14.48,
+      "feat_loss": 0.00556,
+      "flipped": false
+    },
+    {
+      "class": "contamination",
+      "file": "018.png",
+      "orig_score": 0.8852,
+      "orig_label": "DEFECT",
+      "adv_score": 0.7697,
+      "adv_label": "DEFECT",
+      "delta_pct": -13.05,
+      "feat_loss": 0.00257,
+      "flipped": false
+    }
+  ],
+  "stats": {
+    "total": 9,
+    "score_reduced": 9,
+    "flipped": 0,
+    "mean_drop_pct": -11.11
+  }
+}
