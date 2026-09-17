@@ -1,0 +1,278 @@
+{
+  "jpeg_quality": 75,
+  "total": 27,
+  "flip_no_defense": 12,
+  "flip_with_defense": 0,
+  "rows": [
+    {
+      "file": "broken_large_005_eps0.05.png",
+      "class": "broken_large",
+      "score_no_def": 0.652,
+      "label_no_def": "DEFECT",
+      "score_def": 0.7501,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_large_005_eps0.08.png",
+      "class": "broken_large",
+      "score_no_def": 0.6455,
+      "label_no_def": "DEFECT",
+      "score_def": 0.7382,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_large_005_eps0.10.png",
+      "class": "broken_large",
+      "score_no_def": 0.6399,
+      "label_no_def": "DEFECT",
+      "score_def": 0.7363,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_large_011_eps0.05.png",
+      "class": "broken_large",
+      "score_no_def": 0.5747,
+      "label_no_def": "DEFECT",
+      "score_def": 0.715,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_large_011_eps0.08.png",
+      "class": "broken_large",
+      "score_no_def": 0.5682,
+      "label_no_def": "DEFECT",
+      "score_def": 0.708,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_large_011_eps0.10.png",
+      "class": "broken_large",
+      "score_no_def": 0.5669,
+      "label_no_def": "DEFECT",
+      "score_def": 0.7007,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_small_000_eps0.05.png",
+      "class": "broken_small",
+      "score_no_def": 0.5334,
+      "label_no_def": "DEFECT",
+      "score_def": 0.6426,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_small_000_eps0.08.png",
+      "class": "broken_small",
+      "score_no_def": 0.525,
+      "label_no_def": "DEFECT",
+      "score_def": 0.634,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_small_000_eps0.10.png",
+      "class": "broken_small",
+      "score_no_def": 0.5269,
+      "label_no_def": "DEFECT",
+      "score_def": 0.6397,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_small_005_eps0.05.png",
+      "class": "broken_small",
+      "score_no_def": 0.5867,
+      "label_no_def": "DEFECT",
+      "score_def": 0.6762,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_small_005_eps0.08.png",
+      "class": "broken_small",
+      "score_no_def": 0.5759,
+      "label_no_def": "DEFECT",
+      "score_def": 0.6859,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_small_005_eps0.10.png",
+      "class": "broken_small",
+      "score_no_def": 0.5773,
+      "label_no_def": "DEFECT",
+      "score_def": 0.678,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_small_014_eps0.05.png",
+      "class": "broken_small",
+      "score_no_def": 0.5873,
+      "label_no_def": "DEFECT",
+      "score_def": 0.6649,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_small_014_eps0.08.png",
+      "class": "broken_small",
+      "score_no_def": 0.5822,
+      "label_no_def": "DEFECT",
+      "score_def": 0.6628,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "broken_small_014_eps0.10.png",
+      "class": "broken_small",
+      "score_no_def": 0.5841,
+      "label_no_def": "DEFECT",
+      "score_def": 0.6541,
+      "label_def": "DEFECT",
+      "flipped_no_def": false,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_012_eps0.05.png",
+      "class": "contamination",
+      "score_no_def": 0.4635,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5469,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_012_eps0.08.png",
+      "class": "contamination",
+      "score_no_def": 0.4543,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5611,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_012_eps0.10.png",
+      "class": "contamination",
+      "score_no_def": 0.4508,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5414,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_016_eps0.05.png",
+      "class": "contamination",
+      "score_no_def": 0.4563,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5417,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_016_eps0.08.png",
+      "class": "contamination",
+      "score_no_def": 0.4598,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5281,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_016_eps0.10.png",
+      "class": "contamination",
+      "score_no_def": 0.4487,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5431,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_019_eps0.05.png",
+      "class": "contamination",
+      "score_no_def": 0.4064,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5292,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_019_eps0.08.png",
+      "class": "contamination",
+      "score_no_def": 0.4025,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5257,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_019_eps0.10.png",
+      "class": "contamination",
+      "score_no_def": 0.4047,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5199,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_020_eps0.05.png",
+      "class": "contamination",
+      "score_no_def": 0.4553,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5534,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_020_eps0.08.png",
+      "class": "contamination",
+      "score_no_def": 0.4429,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5325,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    },
+    {
+      "file": "contamination_020_eps0.10.png",
+      "class": "contamination",
+      "score_no_def": 0.4393,
+      "label_no_def": "NORMAL",
+      "score_def": 0.5364,
+      "label_def": "DEFECT",
+      "flipped_no_def": true,
+      "flipped_def": false
+    }
+  ]
+}

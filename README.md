@@ -14,12 +14,12 @@
 - [x] Baseline зафиксирован
 - [x] Data Poisoning
 - [x] Adversarial Attack
-- [ ] Митигации
+- [x] Митигации (JPEG-защита)
 
 ## Структура
 
 - `baseline/` — скрипты замера исходных метрик
-- `src/` — скрипты атак и оценки
+- `src/` — скрипты атак, защиты и оценки
 - `results/` — метрики, графики, чекпоинты
 - `reports/` — итоговый отчёт
 - `notes.md` — рабочий дневник
@@ -102,6 +102,38 @@
 
 ---
 
+## Митигации
+
+Защита от adversarial attack через JPEG-компрессию входа.
+
+**Идея:** adversarial-шум — это высокочастотные колебания пикселей. JPEG
+отбрасывает часть высокочастотной информации, шум стирается. Глаз разницы
+не видит (mean diff = 2.1 из 255), а атака перестаёт работать.
+
+**Метод:** перед подачей в модель картинка прогоняется через JPEG с качеством 75.
+
+| | Flip rate |
+|---|---:|
+| Без защиты | **12/27 (44.4%)** |
+| С защитой (JPEG Q75) | **0/27 (0.0%)** |
+
+Защита обнулила все 12 успешных атак. Ни одна не сработала повторно.
+
+![Защита — flip rate до/после](results/defense_plot.png)
+
+*Слева: flip rate по классам до/после. Справа: score flip-картинок — все поднялись выше порога 0.54.*
+
+**Ограничения:**
+
+- Защита эффективна против PGD через пиксели. Более сильная атака с учётом JPEG (EOT) может её обойти.
+- Adversarial Training даёт более надёжную защиту, но требует переобучения модели.
+- JPEG Q75 замедляет инференс на ~5–10 мс на картинку — для realtime-пайплайна это надо учитывать.
+
+Полные данные: `results/defense_results.json`.  
+Скрипты: `src/defense.py`, `src/evaluate_defense.py`, `src/plot_defense.py`.
+
+---
+
 ## 🛠 Технологии
 
 - **Python 3.11**, PyTorch 2.x (CPU)
@@ -143,6 +175,14 @@ python src\adversarial_attack.py
 python src\plot_adversarial.py
 ```
 
+### 5. Митигации (JPEG-защита)
+
+```
+python src\defense.py
+python src\evaluate_defense.py
+python src\plot_defense.py
+```
+
 ---
 
 ## 📁 Структура проекта
@@ -158,7 +198,10 @@ ai-security-lab/
 │   ├── plot_poison.py             # График Data Poisoning
 │   ├── recon_patchcore.py         # Разведка структуры PatchCore
 │   ├── adversarial_attack.py      # PGD feature-space атака
-│   └── plot_adversarial.py        # График Adversarial Attack
+│   ├── plot_adversarial.py        # График Adversarial Attack
+│   ├── defense.py                 # JPEG-защита
+│   ├── evaluate_defense.py        # Оценка защиты
+│   └── plot_defense.py            # График до/после защиты
 ├── results/
 │   ├── baseline_metrics.json
 │   ├── poison_summary.json
@@ -166,7 +209,9 @@ ai-security-lab/
 │   ├── adversarial_border.json
 │   ├── adversarial_plot.png
 │   ├── mean_normal_features.pt
-│   └── adversarial_border/        # Визуализация: orig, adv, noise ×10
+│   ├── adversarial_border/        # Визуализация: orig, adv, noise ×10
+│   ├── defense_results.json
+│   └── defense_plot.png
 ├── notes.md                       # Рабочий дневник
 ├── requirements.txt
 └── README.md
@@ -176,9 +221,9 @@ ai-security-lab/
 
 ## 🎯 Дальше
 
-- [ ] **Митигации:** adversarial training на граничных примерах, label-noise detection, ансамбли.
 - [ ] **Adversarial Patch:** наклейка на бутылку, которая «гасит» детекцию.
-- [ ] **Black-box атака:** без доступа к градиентам.
+- [ ] **Black-box атака:** без доступа к градиентам (transfer attack).
+- [ ] **Adversarial Training:** более надёжная защита, чем JPEG, но требует переобучения.
 
 ---
 
