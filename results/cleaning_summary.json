@@ -1,0 +1,22 @@
+{
+  "cleaned_01": {
+    "n_total": 211,
+    "n_kept": 209,
+    "n_removed": 2
+  },
+  "cleaned_05": {
+    "n_total": 219,
+    "n_kept": 209,
+    "n_removed": 10
+  },
+  "cleaned_10": {
+    "n_total": 229,
+    "n_kept": 209,
+    "n_removed": 20
+  },
+  "cleaned_20": {
+    "n_total": 250,
+    "n_kept": 209,
+    "n_removed": 41
+  }
+}

@@ -18,9 +18,14 @@ __pycache__/
 *.onnx
 data/MVTecAD/
 data/poisoned*/
+data/cleaned*/
+# Временные файлы защиты
+results/_tmp_defense/
 # Служебные папки Anomalib/Lightning
 results/Patchcore/
 results/*/v*/
+results/cleaned_*/
+results/poisoned_*/
 
 # IDE
 .vscode/

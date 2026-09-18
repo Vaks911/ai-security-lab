@@ -1,0 +1,1273 @@
+{
+  "poison_level": 20,
+  "total": 250,
+  "n_clean": 209,
+  "n_poison": 41,
+  "clean_stats": {
+    "mean": 0.2337,
+    "min": 0.2237,
+    "max": 0.2568,
+    "median": 0.2332,
+    "p95": 0.2417
+  },
+  "poison_stats": {
+    "mean": 0.7772,
+    "min": 0.5,
+    "max": 1.0,
+    "median": 0.8001,
+    "p95": 0.9228
+  },
+  "threshold": 0.37839046120643616,
+  "results": [
+    {
+      "file": "000.png",
+      "score": 0.23510998487472534,
+      "is_poison": false
+    },
+    {
+      "file": "001.png",
+      "score": 0.23261743783950806,
+      "is_poison": false
+    },
+    {
+      "file": "002.png",
+      "score": 0.23045220971107483,
+      "is_poison": false
+    },
+    {
+      "file": "003.png",
+      "score": 0.23109525442123413,
+      "is_poison": false
+    },
+    {
+      "file": "004.png",
+      "score": 0.23583564162254333,
+      "is_poison": false
+    },
+    {
+      "file": "005.png",
+      "score": 0.2343616783618927,
+      "is_poison": false
+    },
+    {
+      "file": "006.png",
+      "score": 0.2351175844669342,
+      "is_poison": false
+    },
+    {
+      "file": "007.png",
+      "score": 0.22803515195846558,
+      "is_poison": false
+    },
+    {
+      "file": "008.png",
+      "score": 0.22678905725479126,
+      "is_poison": false
+    },
+    {
+      "file": "009.png",
+      "score": 0.2417554259300232,
+      "is_poison": false
+    },
+    {
+      "file": "010.png",
+      "score": 0.22811201214790344,
+      "is_poison": false
+    },
+    {
+      "file": "011.png",
+      "score": 0.238933265209198,
+      "is_poison": false
+    },
+    {
+      "file": "012.png",
+      "score": 0.23212125897407532,
+      "is_poison": false
+    },
+    {
+      "file": "013.png",
+      "score": 0.23260939121246338,
+      "is_poison": false
+    },
+    {
+      "file": "014.png",
+      "score": 0.23129743337631226,
+      "is_poison": false
+    },
+    {
+      "file": "015.png",
+      "score": 0.23292633891105652,
+      "is_poison": false
+    },
+    {
+      "file": "016.png",
+      "score": 0.2296060025691986,
+      "is_poison": false
+    },
+    {
+      "file": "017.png",
+      "score": 0.22690489888191223,
+      "is_poison": false
+    },
+    {
+      "file": "018.png",
+      "score": 0.23107364773750305,
+      "is_poison": false
+    },
+    {
+      "file": "019.png",
+      "score": 0.2292417585849762,
+      "is_poison": false
+    },
+    {
+      "file": "020.png",
+      "score": 0.23874524235725403,
+      "is_poison": false
+    },
+    {
+      "file": "021.png",
+      "score": 0.2327488660812378,
+      "is_poison": false
+    },
+    {
+      "file": "022.png",
+      "score": 0.2320323884487152,
+      "is_poison": false
+    },
+    {
+      "file": "023.png",
+      "score": 0.23600849509239197,
+      "is_poison": false
+    },
+    {
+      "file": "024.png",
+      "score": 0.23475846648216248,
+      "is_poison": false
+    },
+    {
+      "file": "025.png",
+      "score": 0.2347625195980072,
+      "is_poison": false
+    },
+    {
+      "file": "026.png",
+      "score": 0.24404889345169067,
+      "is_poison": false
+    },
+    {
+      "file": "027.png",
+      "score": 0.2312437891960144,
+      "is_poison": false
+    },
+    {
+      "file": "028.png",
+      "score": 0.24064886569976807,
+      "is_poison": false
+    },
+    {
+      "file": "029.png",
+      "score": 0.2399558424949646,
+      "is_poison": false
+    },
+    {
+      "file": "030.png",
+      "score": 0.22935664653778076,
+      "is_poison": false
+    },
+    {
+      "file": "031.png",
+      "score": 0.23078373074531555,
+      "is_poison": false
+    },
+    {
+      "file": "032.png",
+      "score": 0.22953027486801147,
+      "is_poison": false
+    },
+    {
+      "file": "033.png",
+      "score": 0.2307765781879425,
+      "is_poison": false
+    },
+    {
+      "file": "034.png",
+      "score": 0.22932380437850952,
+      "is_poison": false
+    },
+    {
+      "file": "035.png",
+      "score": 0.22916600108146667,
+      "is_poison": false
+    },
+    {
+      "file": "036.png",
+      "score": 0.24533969163894653,
+      "is_poison": false
+    },
+    {
+      "file": "037.png",
+      "score": 0.2461411952972412,
+      "is_poison": false
+    },
+    {
+      "file": "038.png",
+      "score": 0.25678104162216187,
+      "is_poison": false
+    },
+    {
+      "file": "039.png",
+      "score": 0.24114137887954712,
+      "is_poison": false
+    },
+    {
+      "file": "040.png",
+      "score": 0.22781246900558472,
+      "is_poison": false
+    },
+    {
+      "file": "041.png",
+      "score": 0.231095552444458,
+      "is_poison": false
+    },
+    {
+      "file": "042.png",
+      "score": 0.22673097252845764,
+      "is_poison": false
+    },
+    {
+      "file": "043.png",
+      "score": 0.23980024456977844,
+      "is_poison": false
+    },
+    {
+      "file": "044.png",
+      "score": 0.2333955466747284,
+      "is_poison": false
+    },
+    {
+      "file": "045.png",
+      "score": 0.22871240973472595,
+      "is_poison": false
+    },
+    {
+      "file": "046.png",
+      "score": 0.23370608687400818,
+      "is_poison": false
+    },
+    {
+      "file": "047.png",
+      "score": 0.234434574842453,
+      "is_poison": false
+    },
+    {
+      "file": "048.png",
+      "score": 0.23612475395202637,
+      "is_poison": false
+    },
+    {
+      "file": "049.png",
+      "score": 0.2365536391735077,
+      "is_poison": false
+    },
+    {
+      "file": "050.png",
+      "score": 0.2283557653427124,
+      "is_poison": false
+    },
+    {
+      "file": "051.png",
+      "score": 0.23648416996002197,
+      "is_poison": false
+    },
+    {
+      "file": "052.png",
+      "score": 0.23513442277908325,
+      "is_poison": false
+    },
+    {
+      "file": "053.png",
+      "score": 0.24207952618598938,
+      "is_poison": false
+    },
+    {
+      "file": "054.png",
+      "score": 0.23426944017410278,
+      "is_poison": false
+    },
+    {
+      "file": "055.png",
+      "score": 0.2336246371269226,
+      "is_poison": false
+    },
+    {
+      "file": "056.png",
+      "score": 0.23189866542816162,
+      "is_poison": false
+    },
+    {
+      "file": "057.png",
+      "score": 0.22830790281295776,
+      "is_poison": false
+    },
+    {
+      "file": "058.png",
+      "score": 0.2332272231578827,
+      "is_poison": false
+    },
+    {
+      "file": "059.png",
+      "score": 0.23421227931976318,
+      "is_poison": false
+    },
+    {
+      "file": "060.png",
+      "score": 0.23197081685066223,
+      "is_poison": false
+    },
+    {
+      "file": "061.png",
+      "score": 0.23274147510528564,
+      "is_poison": false
+    },
+    {
+      "file": "062.png",
+      "score": 0.22667419910430908,
+      "is_poison": false
+    },
+    {
+      "file": "063.png",
+      "score": 0.22834047675132751,
+      "is_poison": false
+    },
+    {
+      "file": "064.png",
+      "score": 0.23677310347557068,
+      "is_poison": false
+    },
+    {
+      "file": "065.png",
+      "score": 0.2332582175731659,
+      "is_poison": false
+    },
+    {
+      "file": "066.png",
+      "score": 0.24152016639709473,
+      "is_poison": false
+    },
+    {
+      "file": "067.png",
+      "score": 0.23511028289794922,
+      "is_poison": false
+    },
+    {
+      "file": "068.png",
+      "score": 0.23333194851875305,
+      "is_poison": false
+    },
+    {
+      "file": "069.png",
+      "score": 0.22634193301200867,
+      "is_poison": false
+    },
+    {
+      "file": "070.png",
+      "score": 0.2332949936389923,
+      "is_poison": false
+    },
+    {
+      "file": "071.png",
+      "score": 0.2340967357158661,
+      "is_poison": false
+    },
+    {
+      "file": "072.png",
+      "score": 0.23046401143074036,
+      "is_poison": false
+    },
+    {
+      "file": "073.png",
+      "score": 0.23109334707260132,
+      "is_poison": false
+    },
+    {
+      "file": "074.png",
+      "score": 0.2374226450920105,
+      "is_poison": false
+    },
+    {
+      "file": "075.png",
+      "score": 0.229356050491333,
+      "is_poison": false
+    },
+    {
+      "file": "076.png",
+      "score": 0.23503059148788452,
+      "is_poison": false
+    },
+    {
+      "file": "077.png",
+      "score": 0.23626098036766052,
+      "is_poison": false
+    },
+    {
+      "file": "078.png",
+      "score": 0.22972998023033142,
+      "is_poison": false
+    },
+    {
+      "file": "079.png",
+      "score": 0.236325204372406,
+      "is_poison": false
+    },
+    {
+      "file": "080.png",
+      "score": 0.22931063175201416,
+      "is_poison": false
+    },
+    {
+      "file": "081.png",
+      "score": 0.23936927318572998,
+      "is_poison": false
+    },
+    {
+      "file": "082.png",
+      "score": 0.23514729738235474,
+      "is_poison": false
+    },
+    {
+      "file": "083.png",
+      "score": 0.24075931310653687,
+      "is_poison": false
+    },
+    {
+      "file": "084.png",
+      "score": 0.23327204585075378,
+      "is_poison": false
+    },
+    {
+      "file": "085.png",
+      "score": 0.2296523153781891,
+      "is_poison": false
+    },
+    {
+      "file": "086.png",
+      "score": 0.2396107316017151,
+      "is_poison": false
+    },
+    {
+      "file": "087.png",
+      "score": 0.2321038842201233,
+      "is_poison": false
+    },
+    {
+      "file": "088.png",
+      "score": 0.23648875951766968,
+      "is_poison": false
+    },
+    {
+      "file": "089.png",
+      "score": 0.2301478385925293,
+      "is_poison": false
+    },
+    {
+      "file": "090.png",
+      "score": 0.23890084028244019,
+      "is_poison": false
+    },
+    {
+      "file": "091.png",
+      "score": 0.24088448286056519,
+      "is_poison": false
+    },
+    {
+      "file": "092.png",
+      "score": 0.2350742220878601,
+      "is_poison": false
+    },
+    {
+      "file": "093.png",
+      "score": 0.24074149131774902,
+      "is_poison": false
+    },
+    {
+      "file": "094.png",
+      "score": 0.22826409339904785,
+      "is_poison": false
+    },
+    {
+      "file": "095.png",
+      "score": 0.23178964853286743,
+      "is_poison": false
+    },
+    {
+      "file": "096.png",
+      "score": 0.2291949987411499,
+      "is_poison": false
+    },
+    {
+      "file": "097.png",
+      "score": 0.2352178692817688,
+      "is_poison": false
+    },
+    {
+      "file": "098.png",
+      "score": 0.24107053875923157,
+      "is_poison": false
+    },
+    {
+      "file": "099.png",
+      "score": 0.23349589109420776,
+      "is_poison": false
+    },
+    {
+      "file": "100.png",
+      "score": 0.23179948329925537,
+      "is_poison": false
+    },
+    {
+      "file": "101.png",
+      "score": 0.2296944260597229,
+      "is_poison": false
+    },
+    {
+      "file": "102.png",
+      "score": 0.2283141016960144,
+      "is_poison": false
+    },
+    {
+      "file": "103.png",
+      "score": 0.23602047562599182,
+      "is_poison": false
+    },
+    {
+      "file": "104.png",
+      "score": 0.23035281896591187,
+      "is_poison": false
+    },
+    {
+      "file": "105.png",
+      "score": 0.23217865824699402,
+      "is_poison": false
+    },
+    {
+      "file": "106.png",
+      "score": 0.23390421271324158,
+      "is_poison": false
+    },
+    {
+      "file": "107.png",
+      "score": 0.23317000269889832,
+      "is_poison": false
+    },
+    {
+      "file": "108.png",
+      "score": 0.23307985067367554,
+      "is_poison": false
+    },
+    {
+      "file": "109.png",
+      "score": 0.23854804039001465,
+      "is_poison": false
+    },
+    {
+      "file": "110.png",
+      "score": 0.2347986102104187,
+      "is_poison": false
+    },
+    {
+      "file": "111.png",
+      "score": 0.23779630661010742,
+      "is_poison": false
+    },
+    {
+      "file": "112.png",
+      "score": 0.22984594106674194,
+      "is_poison": false
+    },
+    {
+      "file": "113.png",
+      "score": 0.22694936394691467,
+      "is_poison": false
+    },
+    {
+      "file": "114.png",
+      "score": 0.23774844408035278,
+      "is_poison": false
+    },
+    {
+      "file": "115.png",
+      "score": 0.24470975995063782,
+      "is_poison": false
+    },
+    {
+      "file": "116.png",
+      "score": 0.23121577501296997,
+      "is_poison": false
+    },
+    {
+      "file": "117.png",
+      "score": 0.2365868091583252,
+      "is_poison": false
+    },
+    {
+      "file": "118.png",
+      "score": 0.24271303415298462,
+      "is_poison": false
+    },
+    {
+      "file": "119.png",
+      "score": 0.22862479090690613,
+      "is_poison": false
+    },
+    {
+      "file": "120.png",
+      "score": 0.23880454897880554,
+      "is_poison": false
+    },
+    {
+      "file": "121.png",
+      "score": 0.23428696393966675,
+      "is_poison": false
+    },
+    {
+      "file": "122.png",
+      "score": 0.22976046800613403,
+      "is_poison": false
+    },
+    {
+      "file": "123.png",
+      "score": 0.23563727736473083,
+      "is_poison": false
+    },
+    {
+      "file": "124.png",
+      "score": 0.2338324785232544,
+      "is_poison": false
+    },
+    {
+      "file": "125.png",
+      "score": 0.25272035598754883,
+      "is_poison": false
+    },
+    {
+      "file": "126.png",
+      "score": 0.2402423918247223,
+      "is_poison": false
+    },
+    {
+      "file": "127.png",
+      "score": 0.2367551028728485,
+      "is_poison": false
+    },
+    {
+      "file": "128.png",
+      "score": 0.2364964783191681,
+      "is_poison": false
+    },
+    {
+      "file": "129.png",
+      "score": 0.24384847283363342,
+      "is_poison": false
+    },
+    {
+      "file": "130.png",
+      "score": 0.2321474850177765,
+      "is_poison": false
+    },
+    {
+      "file": "131.png",
+      "score": 0.23815062642097473,
+      "is_poison": false
+    },
+    {
+      "file": "132.png",
+      "score": 0.2365325689315796,
+      "is_poison": false
+    },
+    {
+      "file": "133.png",
+      "score": 0.23526951670646667,
+      "is_poison": false
+    },
+    {
+      "file": "134.png",
+      "score": 0.2369959056377411,
+      "is_poison": false
+    },
+    {
+      "file": "135.png",
+      "score": 0.23167318105697632,
+      "is_poison": false
+    },
+    {
+      "file": "136.png",
+      "score": 0.23019355535507202,
+      "is_poison": false
+    },
+    {
+      "file": "137.png",
+      "score": 0.23066022992134094,
+      "is_poison": false
+    },
+    {
+      "file": "138.png",
+      "score": 0.23141109943389893,
+      "is_poison": false
+    },
+    {
+      "file": "139.png",
+      "score": 0.22928139567375183,
+      "is_poison": false
+    },
+    {
+      "file": "140.png",
+      "score": 0.23052391409873962,
+      "is_poison": false
+    },
+    {
+      "file": "141.png",
+      "score": 0.2290174663066864,
+      "is_poison": false
+    },
+    {
+      "file": "142.png",
+      "score": 0.23117029666900635,
+      "is_poison": false
+    },
+    {
+      "file": "143.png",
+      "score": 0.2347998321056366,
+      "is_poison": false
+    },
+    {
+      "file": "144.png",
+      "score": 0.2269572913646698,
+      "is_poison": false
+    },
+    {
+      "file": "145.png",
+      "score": 0.23291221261024475,
+      "is_poison": false
+    },
+    {
+      "file": "146.png",
+      "score": 0.22368696331977844,
+      "is_poison": false
+    },
+    {
+      "file": "147.png",
+      "score": 0.2337663471698761,
+      "is_poison": false
+    },
+    {
+      "file": "148.png",
+      "score": 0.23846736550331116,
+      "is_poison": false
+    },
+    {
+      "file": "149.png",
+      "score": 0.22855648398399353,
+      "is_poison": false
+    },
+    {
+      "file": "150.png",
+      "score": 0.23077845573425293,
+      "is_poison": false
+    },
+    {
+      "file": "151.png",
+      "score": 0.22879666090011597,
+      "is_poison": false
+    },
+    {
+      "file": "152.png",
+      "score": 0.23920798301696777,
+      "is_poison": false
+    },
+    {
+      "file": "153.png",
+      "score": 0.23205262422561646,
+      "is_poison": false
+    },
+    {
+      "file": "154.png",
+      "score": 0.2351081371307373,
+      "is_poison": false
+    },
+    {
+      "file": "155.png",
+      "score": 0.23665010929107666,
+      "is_poison": false
+    },
+    {
+      "file": "156.png",
+      "score": 0.23816213011741638,
+      "is_poison": false
+    },
+    {
+      "file": "157.png",
+      "score": 0.22871199250221252,
+      "is_poison": false
+    },
+    {
+      "file": "158.png",
+      "score": 0.22912248969078064,
+      "is_poison": false
+    },
+    {
+      "file": "159.png",
+      "score": 0.22574421763420105,
+      "is_poison": false
+    },
+    {
+      "file": "160.png",
+      "score": 0.23256444931030273,
+      "is_poison": false
+    },
+    {
+      "file": "161.png",
+      "score": 0.2316265106201172,
+      "is_poison": false
+    },
+    {
+      "file": "162.png",
+      "score": 0.22862985730171204,
+      "is_poison": false
+    },
+    {
+      "file": "163.png",
+      "score": 0.2263612449169159,
+      "is_poison": false
+    },
+    {
+      "file": "164.png",
+      "score": 0.22516947984695435,
+      "is_poison": false
+    },
+    {
+      "file": "165.png",
+      "score": 0.22812026739120483,
+      "is_poison": false
+    },
+    {
+      "file": "166.png",
+      "score": 0.23857906460762024,
+      "is_poison": false
+    },
+    {
+      "file": "167.png",
+      "score": 0.23068547248840332,
+      "is_poison": false
+    },
+    {
+      "file": "168.png",
+      "score": 0.2284826934337616,
+      "is_poison": false
+    },
+    {
+      "file": "169.png",
+      "score": 0.23174279928207397,
+      "is_poison": false
+    },
+    {
+      "file": "170.png",
+      "score": 0.2377011477947235,
+      "is_poison": false
+    },
+    {
+      "file": "171.png",
+      "score": 0.22966429591178894,
+      "is_poison": false
+    },
+    {
+      "file": "172.png",
+      "score": 0.23283055424690247,
+      "is_poison": false
+    },
+    {
+      "file": "173.png",
+      "score": 0.23608294129371643,
+      "is_poison": false
+    },
+    {
+      "file": "174.png",
+      "score": 0.2274625599384308,
+      "is_poison": false
+    },
+    {
+      "file": "175.png",
+      "score": 0.23957854509353638,
+      "is_poison": false
+    },
+    {
+      "file": "176.png",
+      "score": 0.22788870334625244,
+      "is_poison": false
+    },
+    {
+      "file": "177.png",
+      "score": 0.2287050187587738,
+      "is_poison": false
+    },
+    {
+      "file": "178.png",
+      "score": 0.2271347939968109,
+      "is_poison": false
+    },
+    {
+      "file": "179.png",
+      "score": 0.2361285388469696,
+      "is_poison": false
+    },
+    {
+      "file": "180.png",
+      "score": 0.23529279232025146,
+      "is_poison": false
+    },
+    {
+      "file": "181.png",
+      "score": 0.24070441722869873,
+      "is_poison": false
+    },
+    {
+      "file": "182.png",
+      "score": 0.2334756851196289,
+      "is_poison": false
+    },
+    {
+      "file": "183.png",
+      "score": 0.2305629849433899,
+      "is_poison": false
+    },
+    {
+      "file": "184.png",
+      "score": 0.23675048351287842,
+      "is_poison": false
+    },
+    {
+      "file": "185.png",
+      "score": 0.23691219091415405,
+      "is_poison": false
+    },
+    {
+      "file": "186.png",
+      "score": 0.23565468192100525,
+      "is_poison": false
+    },
+    {
+      "file": "187.png",
+      "score": 0.23001649975776672,
+      "is_poison": false
+    },
+    {
+      "file": "188.png",
+      "score": 0.23342281579971313,
+      "is_poison": false
+    },
+    {
+      "file": "189.png",
+      "score": 0.2334446907043457,
+      "is_poison": false
+    },
+    {
+      "file": "190.png",
+      "score": 0.24216195940971375,
+      "is_poison": false
+    },
+    {
+      "file": "191.png",
+      "score": 0.2307550609111786,
+      "is_poison": false
+    },
+    {
+      "file": "192.png",
+      "score": 0.2373039722442627,
+      "is_poison": false
+    },
+    {
+      "file": "193.png",
+      "score": 0.23127365112304688,
+      "is_poison": false
+    },
+    {
+      "file": "194.png",
+      "score": 0.23476892709732056,
+      "is_poison": false
+    },
+    {
+      "file": "195.png",
+      "score": 0.23313811421394348,
+      "is_poison": false
+    },
+    {
+      "file": "196.png",
+      "score": 0.23268747329711914,
+      "is_poison": false
+    },
+    {
+      "file": "197.png",
+      "score": 0.23778551816940308,
+      "is_poison": false
+    },
+    {
+      "file": "198.png",
+      "score": 0.2329164445400238,
+      "is_poison": false
+    },
+    {
+      "file": "199.png",
+      "score": 0.22754555940628052,
+      "is_poison": false
+    },
+    {
+      "file": "200.png",
+      "score": 0.230057030916214,
+      "is_poison": false
+    },
+    {
+      "file": "201.png",
+      "score": 0.23570850491523743,
+      "is_poison": false
+    },
+    {
+      "file": "202.png",
+      "score": 0.2348303496837616,
+      "is_poison": false
+    },
+    {
+      "file": "203.png",
+      "score": 0.23664957284927368,
+      "is_poison": false
+    },
+    {
+      "file": "204.png",
+      "score": 0.22887322306632996,
+      "is_poison": false
+    },
+    {
+      "file": "205.png",
+      "score": 0.23620593547821045,
+      "is_poison": false
+    },
+    {
+      "file": "206.png",
+      "score": 0.23001793026924133,
+      "is_poison": false
+    },
+    {
+      "file": "207.png",
+      "score": 0.2364601194858551,
+      "is_poison": false
+    },
+    {
+      "file": "208.png",
+      "score": 0.22965627908706665,
+      "is_poison": false
+    },
+    {
+      "file": "poison_000_broken_small_020.png",
+      "score": 0.8702426552772522,
+      "is_poison": true
+    },
+    {
+      "file": "poison_001_broken_large_007.png",
+      "score": 0.7644213438034058,
+      "is_poison": true
+    },
+    {
+      "file": "poison_002_broken_large_001.png",
+      "score": 0.7994586229324341,
+      "is_poison": true
+    },
+    {
+      "file": "poison_003_contamination_005.png",
+      "score": 0.8453953862190247,
+      "is_poison": true
+    },
+    {
+      "file": "poison_004_broken_large_017.png",
+      "score": 0.8173097372055054,
+      "is_poison": true
+    },
+    {
+      "file": "poison_005_broken_large_015.png",
+      "score": 0.8440132141113281,
+      "is_poison": true
+    },
+    {
+      "file": "poison_006_broken_large_014.png",
+      "score": 0.8232173323631287,
+      "is_poison": true
+    },
+    {
+      "file": "poison_007_broken_large_008.png",
+      "score": 0.8354184627532959,
+      "is_poison": true
+    },
+    {
+      "file": "poison_008_contamination_017.png",
+      "score": 0.9435763359069824,
+      "is_poison": true
+    },
+    {
+      "file": "poison_009_broken_large_006.png",
+      "score": 0.87771075963974,
+      "is_poison": true
+    },
+    {
+      "file": "poison_010_contamination_001.png",
+      "score": 0.5622644424438477,
+      "is_poison": true
+    },
+    {
+      "file": "poison_011_contamination_012.png",
+      "score": 0.5572283267974854,
+      "is_poison": true
+    },
+    {
+      "file": "poison_012_broken_small_014.png",
+      "score": 0.6416574120521545,
+      "is_poison": true
+    },
+    {
+      "file": "poison_013_broken_large_005.png",
+      "score": 0.7373760342597961,
+      "is_poison": true
+    },
+    {
+      "file": "poison_014_broken_small_017.png",
+      "score": 0.8531848192214966,
+      "is_poison": true
+    },
+    {
+      "file": "poison_015_broken_small_007.png",
+      "score": 0.7228859663009644,
+      "is_poison": true
+    },
+    {
+      "file": "poison_016_broken_large_002.png",
+      "score": 0.7919270992279053,
+      "is_poison": true
+    },
+    {
+      "file": "poison_017_contamination_018.png",
+      "score": 0.8852308988571167,
+      "is_poison": true
+    },
+    {
+      "file": "poison_018_contamination_007.png",
+      "score": 1.0,
+      "is_poison": true
+    },
+    {
+      "file": "poison_019_broken_large_013.png",
+      "score": 0.7801716923713684,
+      "is_poison": true
+    },
+    {
+      "file": "poison_020_contamination_014.png",
+      "score": 0.7190689444541931,
+      "is_poison": true
+    },
+    {
+      "file": "poison_021_broken_small_012.png",
+      "score": 0.8001490831375122,
+      "is_poison": true
+    },
+    {
+      "file": "poison_022_broken_small_018.png",
+      "score": 0.8808286190032959,
+      "is_poison": true
+    },
+    {
+      "file": "poison_023_contamination_003.png",
+      "score": 0.49999988079071045,
+      "is_poison": true
+    },
+    {
+      "file": "poison_024_broken_small_015.png",
+      "score": 0.7427098155021667,
+      "is_poison": true
+    },
+    {
+      "file": "poison_025_broken_large_012.png",
+      "score": 0.8209983110427856,
+      "is_poison": true
+    },
+    {
+      "file": "poison_026_contamination_008.png",
+      "score": 0.7599326968193054,
+      "is_poison": true
+    },
+    {
+      "file": "poison_027_broken_small_006.png",
+      "score": 0.7926108837127686,
+      "is_poison": true
+    },
+    {
+      "file": "poison_028_contamination_000.png",
+      "score": 0.7106720209121704,
+      "is_poison": true
+    },
+    {
+      "file": "poison_029_broken_small_008.png",
+      "score": 0.6979983448982239,
+      "is_poison": true
+    },
+    {
+      "file": "poison_030_contamination_016.png",
+      "score": 0.5435213446617126,
+      "is_poison": true
+    },
+    {
+      "file": "poison_031_broken_large_000.png",
+      "score": 0.8252986669540405,
+      "is_poison": true
+    },
+    {
+      "file": "poison_032_broken_small_004.png",
+      "score": 0.8681538105010986,
+      "is_poison": true
+    },
+    {
+      "file": "poison_033_broken_small_005.png",
+      "score": 0.6707720160484314,
+      "is_poison": true
+    },
+    {
+      "file": "poison_034_contamination_002.png",
+      "score": 0.6758519411087036,
+      "is_poison": true
+    },
+    {
+      "file": "poison_035_broken_small_002.png",
+      "score": 0.8103022575378418,
+      "is_poison": true
+    },
+    {
+      "file": "poison_036_contamination_010.png",
+      "score": 0.8537151217460632,
+      "is_poison": true
+    },
+    {
+      "file": "poison_037_broken_large_010.png",
+      "score": 0.8352222442626953,
+      "is_poison": true
+    },
+    {
+      "file": "poison_038_contamination_013.png",
+      "score": 0.9228407740592957,
+      "is_poison": true
+    },
+    {
+      "file": "poison_039_broken_large_004.png",
+      "score": 0.8737406730651855,
+      "is_poison": true
+    },
+    {
+      "file": "poison_040_contamination_011.png",
+      "score": 0.6078716516494751,
+      "is_poison": true
+    }
+  ]
+}

@@ -14,7 +14,7 @@
 - [x] Baseline зафиксирован
 - [x] Data Poisoning
 - [x] Adversarial Attack
-- [x] Митигации (JPEG-защита)
+- [x] Митигации (JPEG-защита + очистка данных)
 
 ## Структура
 
@@ -63,11 +63,7 @@
 ![Data Poisoning — два режима отказа](results/poison_plot.png)
 
 *Слева: F1/Recall/Precision — переход от «ослепления» к «паранойе» на 10%.  
-Справа: FN vs FP — визуальная смена режима отказа. Дневник: `notes.md`.*
-
-**Ключевой вывод:** даже 1% отравления даёт заметный эффект — F1 падает на 1.6%.
-Тонкая атака (1–5%) опаснее грубой, потому что модель пропускает дефекты
-тихо, без ложных тревог.
+Справа: FN vs FP — визуальная смена режима отказа.*
 
 ---
 
@@ -76,8 +72,8 @@
 Атака в feature-space backbone. Цель — сдвинуть фичи дефекта к среднему нормы,
 чтобы модель назвала его NORMAL.
 
-**Метод:** PGD (100 шагов, eps ∈ {0.05, 0.08, 0.10}) через `FeatureListNet`
-(внутренняя timm-модель PatchCore). Loss = MSE(features, mean_normal_features).
+**Метод:** PGD (100 шагов, eps ∈ {0.05, 0.08, 0.10}) через `FeatureListNet`.
+Loss = MSE(features, mean_normal_features).
 
 **Результат:** 12/27 flip (**44.4%**). Все 4 `contamination` переключились при eps=0.05.
 
@@ -89,48 +85,55 @@
 
 ![Adversarial Attack — три панели](results/adversarial_plot.png)
 
-*Слева: flip rate по классам. В центре: снижение score по eps, насыщение после 0.05.  
+*Слева: flip rate по классам. В центре: снижение score по eps.  
 Справа: scatter orig vs adv, зелёная зона — область flip.*
 
-**Ключевой вывод:** атака эффективна **только у границы решения**. Если модель
-уверена в дефекте (score > 0.6) — adversarial-шум не помогает. Если score близок
-к порогу — снижения хватает для flip. Визуально adversarial-картинка неотличима
-от оригинала.
-
-Полные данные: `results/adversarial_border.json`, `results/adversarial_border.csv`.  
-Визуализация: `results/adversarial_border/`.
+**Ключевой вывод:** атака эффективна только у границы решения.
 
 ---
 
 ## Митигации
 
-Защита от adversarial attack через JPEG-компрессию входа.
+Две защиты, по одной на каждую атаку.
 
-**Идея:** adversarial-шум — это высокочастотные колебания пикселей. JPEG
-отбрасывает часть высокочастотной информации, шум стирается. Глаз разницы
-не видит (mean diff = 2.1 из 255), а атака перестаёт работать.
+### 1. Adversarial — JPEG-защита входа
 
-**Метод:** перед подачей в модель картинка прогоняется через JPEG с качеством 75.
+Adversarial-шум — высокочастотные колебания пикселей. JPEG Q75 их стирает, глаз разницы не видит.
 
 | | Flip rate |
 |---|---:|
 | Без защиты | **12/27 (44.4%)** |
 | С защитой (JPEG Q75) | **0/27 (0.0%)** |
 
-Защита обнулила все 12 успешных атак. Ни одна не сработала повторно.
-
-![Защита — flip rate до/после](results/defense_plot.png)
+![Adversarial — flip rate до/после](results/defense_plot.png)
 
 *Слева: flip rate по классам до/после. Справа: score flip-картинок — все поднялись выше порога 0.54.*
 
-**Ограничения:**
+### 2. Data Poisoning — очистка через reference-model
 
-- Защита эффективна против PGD через пиксели. Более сильная атака с учётом JPEG (EOT) может её обойти.
-- Adversarial Training даёт более надёжную защиту, но требует переобучения модели.
-- JPEG Q75 замедляет инференс на ~5–10 мс на картинку — для realtime-пайплайна это надо учитывать.
+Чистый baseline v3 даёт низкий anomaly score настоящим нормам (0.22–0.26)
+и высокий — подложенным дефектам (0.50–1.00). Разделяем порогом 0.378.
 
-Полные данные: `results/defense_results.json`.  
-Скрипты: `src/defense.py`, `src/evaluate_defense.py`, `src/plot_defense.py`.
+![Детекция отравленных данных](results/detection_plot.png)
+
+*Чистые нормы (зелёные) — 0.22–0.26. Отравленные (красные) — 0.50–1.00.  
+Порог 0.378 даёт FPR = 0%, Recall = 100%.*
+
+Очищенный датасет → переобучение PatchCore. Результат:
+
+| Уровень | poisoned F1 | cleaned F1 | Δ |
+|---|---:|---:|---:|
+| 1% | 0.9756 | **1.0000** | +0.0244 |
+| 5% | 0.9043 | **1.0000** | +0.0957 |
+| 10% | 0.8630 | **0.9920** | +0.1290 |
+| 20% | 0.8630 | **1.0000** | +0.1370 |
+
+![Атака и защита Data Poisoning](results/mitigation_plot.png)
+
+*Красная линия — F1 отравленных моделей. Зелёная — после очистки.  
+Розовая заливка — «восстановленный F1».*
+
+**Защита полностью восстановила модель** на всех 4 уровнях. Три из четырёх — до идеального F1 = 1.0000.
 
 ---
 
@@ -175,12 +178,22 @@ python src\adversarial_attack.py
 python src\plot_adversarial.py
 ```
 
-### 5. Митигации (JPEG-защита)
+### 5. Защита от Adversarial
 
 ```
 python src\defense.py
 python src\evaluate_defense.py
 python src\plot_defense.py
+```
+
+### 6. Защита от Data Poisoning
+
+```
+python src\detect_poison.py
+python src\plot_detection.py
+python src\clean_dataset.py
+python src\train_cleaned.py
+python src\plot_mitigation.py
 ```
 
 ---
@@ -199,9 +212,14 @@ ai-security-lab/
 │   ├── recon_patchcore.py         # Разведка структуры PatchCore
 │   ├── adversarial_attack.py      # PGD feature-space атака
 │   ├── plot_adversarial.py        # График Adversarial Attack
-│   ├── defense.py                 # JPEG-защита
-│   ├── evaluate_defense.py        # Оценка защиты
-│   └── plot_defense.py            # График до/после защиты
+│   ├── defense.py                 # JPEG-защита входа
+│   ├── evaluate_defense.py        # Оценка защиты от Adversarial
+│   ├── plot_defense.py            # График до/после защиты
+│   ├── detect_poison.py           # Детекция отравленных примеров
+│   ├── plot_detection.py          # Гистограмма чистые vs отравленные
+│   ├── clean_dataset.py           # Очистка датасетов
+│   ├── train_cleaned.py           # Обучение на очищенных данных
+│   └── plot_mitigation.py         # Финальный график атака vs защита
 ├── results/
 │   ├── baseline_metrics.json
 │   ├── poison_summary.json
@@ -209,9 +227,12 @@ ai-security-lab/
 │   ├── adversarial_border.json
 │   ├── adversarial_plot.png
 │   ├── mean_normal_features.pt
-│   ├── adversarial_border/        # Визуализация: orig, adv, noise ×10
 │   ├── defense_results.json
-│   └── defense_plot.png
+│   ├── defense_plot.png
+│   ├── poison_detection_20.json
+│   ├── detection_plot.png
+│   ├── cleaned_XX_metrics.json
+│   └── mitigation_plot.png
 ├── notes.md                       # Рабочий дневник
 ├── requirements.txt
 └── README.md
@@ -223,7 +244,7 @@ ai-security-lab/
 
 - [ ] **Adversarial Patch:** наклейка на бутылку, которая «гасит» детекцию.
 - [ ] **Black-box атака:** без доступа к градиентам (transfer attack).
-- [ ] **Adversarial Training:** более надёжная защита, чем JPEG, но требует переобучения.
+- [ ] **Adversarial Training:** более надёжная защита, чем JPEG.
 
 ---
 

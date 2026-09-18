@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-09-18T08:18:21",
+  "eval_name": "cleaned_10",
+  "ckpt_path": "C:\\MyPythonProjects\\ai-security-lab\\results\\cleaned_10\\Patchcore\\MVTec\\bottle\\v0\\weights\\lightning\\model.ckpt",
+  "n_images": 83,
+  "confusion": {
+    "tp": 62,
+    "tn": 20,
+    "fp": 0,
+    "fn": 1
+  },
+  "overall": {
+    "precision": 1.0,
+    "recall": 0.9841,
+    "f1": 0.992,
+    "accuracy": 0.988
+  },
+  "per_class": {
+    "contamination": {
+      "total": 21,
+      "detected_as_defect": 20,
+      "recall": 0.9524,
+      "mean_score": 0.7428,
+      "min_score": 0.5,
+      "max_score": 1.0
+    },
+    "broken_small": {
+      "total": 22,
+      "detected_as_defect": 22,
+      "recall": 1.0,
+      "mean_score": 0.7967,
+      "min_score": 0.6531,
+      "max_score": 0.9036
+    },
+    "good": {
+      "total": 20,
+      "detected_as_defect": 0,
+      "recall": 0.0,
+      "mean_score": 0.3266,
+      "min_score": 0.2783,
+      "max_score": 0.3796
+    },
+    "broken_large": {
+      "total": 20,
+      "detected_as_defect": 20,
+      "recall": 1.0,
+      "mean_score": 0.8313,
+      "min_score": 0.713,
+      "max_score": 0.9081
+    }
+  }
+}
