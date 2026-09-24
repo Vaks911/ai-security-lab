@@ -19,6 +19,9 @@ __pycache__/
 data/MVTecAD/
 data/poisoned*/
 data/cleaned*/
+data/backdoored/
+results/backdoored/
+results/_tmp_backdoor_eval/
 # Временные файлы защиты
 results/_tmp_defense/
 # Служебные папки Anomalib/Lightning
